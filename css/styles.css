@@ -18,7 +18,7 @@
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303a;
   --main-text-color: #212121;
-  --secondary-text-color: #757575;
+  --secondary-text-color: rgba(117, 117, 117, 1);
   --accent-color: rgba(33, 150, 243, 1);
   --black-for-text: #000000;
   --white-for-text: #ffffff;
@@ -109,6 +109,7 @@ p {
 }
 
 /*линки*/
+
 .contacts {
   display: flex;
   margin-left: auto;
@@ -127,6 +128,17 @@ p {
 .contacts a:focus {
   color: var(--accent-color);
 }
+.contacts .link {
+  display: flex;
+  align-items: center;
+}
+.contacts-icon {
+  padding: 0px;
+  outline: 1px solid tomato;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
 /*Страница студия*/
 /*герой*/
 .hero {
@@ -137,7 +149,7 @@ p {
   background-color: var(--footer-background-color);
   letter-spacing: 0.06em;
 }
-.hero.overlay {
+.overlay {
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -191,6 +203,13 @@ p {
 .advantages {
   display: flex;
 }
+.icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: rgba(245, 244, 250, 1);
+}
 .advantages .item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
@@ -199,6 +218,7 @@ p {
   margin-right: 0;
 }
 .advantages-title {
+  margin-top: 30px;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -265,13 +285,36 @@ p {
 }
 .professions {
   margin-top: 10px;
-  margin-bottom: 30px;
 
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
+}
+.socials {
+  display: flex;
+  padding: 16px 32px 30px;
+}
+.socials-background {
+  display: block;
+  padding: 12px;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: rgba(175, 177, 184, 1);
+}
+.socials-background:nth-child(4n) {
+  margin-right: 0;
+}
+.socials-background:hover,
+.socials-background:focus {
+  background-color: var(--accent-color);
+  color: var(--white-for-text);
+}
+.socials-icon {
+  fill: currentColor;
 }
 /*страница портфолио*/
 /*хедер*/
@@ -330,6 +373,11 @@ p {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.card .item:hover,
+.card .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card .item:nth-child(3n) {
   margin-right: 0;
