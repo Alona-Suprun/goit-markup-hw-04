@@ -14,18 +14,21 @@
 /*контакты в футуре  rgba(255, 255, 255, 0.6)*/
 /*нижний бордер в хедере rgba(236, 236, 236, 1)*/
 :root {
-  --main-background-color: #ffffff;
-  --secondary-background-color: #f5f4fa;
+  --main-background-color: rgba(255, 255, 255, 1);
+  --secondary-background-color: rgba(245, 244, 250, 1);
   --footer-background-color: #2f303a;
   --main-text-color: #212121;
   --secondary-text-color: rgba(117, 117, 117, 1);
   --accent-color: rgba(33, 150, 243, 1);
-  --black-for-text: #000000;
-  --white-for-text: #ffffff;
+  --black-for-text: rgba(33, 33, 33, 1);
+  --white-for-text: rgba(255, 255, 255, 1);
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --header-stroke: rgba(236, 236, 236, 1);
   --hero-backgroumd: rgba(196, 196, 196, 1);
   --hero-overlay: rgba(47, 48, 58, 0.4);
+  --icon-color: rgba(175, 177, 184, 1);
+  --icon-background: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(238, 238, 238, 1);
 }
 /*общие стили*/
 body {
@@ -169,11 +172,12 @@ p {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px 0 20px;
 
   color: var(--white-for-text);
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.4;
+  line-height: 1.36;
   text-transform: uppercase;
 }
 
@@ -207,7 +211,7 @@ p {
   align-items: center;
   justify-content: center;
   height: 120px;
-  background-color: rgba(245, 244, 250, 1);
+  background-color: var(--secondary-background-color);
 }
 .advantages .item {
   width: calc((100% - 90px) / 4);
@@ -269,7 +273,7 @@ p {
   margin-right: 0;
 }
 .human {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -303,8 +307,8 @@ p {
   width: 44px;
   border-radius: 50%;
   margin-right: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(175, 177, 184, 1);
+  background-color: var(--icon-background);
+  color: var(--icon-color);
 }
 .socials-background:nth-child(4n) {
   margin-right: 0;
@@ -330,9 +334,9 @@ p {
 
   width: 170px;
   height: 90px;
-  border: 1px solid rgba(175, 177, 184, 1);
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
-  color: rgba(175, 177, 184, 1);
+  color: var(--icon-color);
 }
 .clients-background:hover,
 .clients-background:focus {
@@ -406,8 +410,11 @@ p {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.card .item:hover,
-.card .item:focus {
+.cards-h-f {
+  display: block;
+}
+.cards-h-f:hover,
+.cards-h-f:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -422,7 +429,7 @@ p {
 }
 .card-text {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--card-border);
   border-top: 0px;
 }
 .cards-title {
@@ -446,6 +453,7 @@ p {
 }
 .contact-us {
   display: flex;
+  align-items: baseline;
 }
 .contact-us-address {
   margin-right: 70px;
@@ -472,7 +480,6 @@ p {
 /*присоединяйтесь*/
 .join {
   justify-content: center;
-  margin-top: 12px;
 }
 .join-text {
   font-weight: 700;
@@ -484,4 +491,7 @@ p {
 .join-socials {
   padding: 0px;
   margin-top: 20px;
+}
+.socials-white {
+  color: var(--white-for-text);
 }
